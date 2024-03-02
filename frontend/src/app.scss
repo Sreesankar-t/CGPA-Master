@@ -1,0 +1,133 @@
+
+@keyframes transilate {
+    from{
+        transform: translateY(-300px);
+        
+    }
+    to{
+       transform: translateY(0);
+       opacity: 1;
+    }
+}
+
+@keyframes transformOpacity {
+    from{
+        opacity: 0;
+        
+    }
+    to{
+      
+       opacity: 1;
+    }
+}
+
+@keyframes animateBtn {
+    from{
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    to{
+      
+        transform: translateY(0);
+       opacity: 1;
+    }
+}
+
+.semesterWrapper{
+    display: flex;
+}
+.h3wrapper{
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.108);
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    animation: transilate 2s;
+}
+
+
+.mainWrapper{
+     
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.wrapper{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    animation: transformOpacity 4s ;
+
+    label{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    input{
+        width: 20%;
+        height: 30px;
+        padding: 10px;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+    } 
+
+    button{
+     
+        height: 40px;
+        width: 10%;
+        border: none;
+        background-color: orange;
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+      
+    }
+
+    h3{
+        color: orange;
+        animation: transformOpacity 2s;
+    }
+
+}
+
+.btnConatiner{
+    margin: auto;
+    width: 50%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+ 
+
+    button{
+        height: 40px;
+        width: 20%;
+        border: none;
+        background-color: rgb(32, 130, 19);
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: animateBtn 3s;
+    }
+}
+
