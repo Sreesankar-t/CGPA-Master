@@ -44,13 +44,13 @@ console.log(netGpa);
   </div>
   <div className='semesterWrapper'>
 
-  <div className='3semester'>
+  <div className='semester1'>
 <Semester1 handleCallback={handleCallback}/>
 <Semester2 handleCallback={handleCallback}/>
 <Semester3 handleCallback={handleCallback}/>
 
   </div>
-  <div className='3semester'>
+  <div className='semester2'>
 
 <Semester4 handleCallback={handleCallback}/>
 <Semester5 handleCallback={handleCallback}/>
