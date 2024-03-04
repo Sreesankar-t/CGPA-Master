@@ -38,7 +38,7 @@ export default function App () {
     let totalCredit = data2.reduce((a, initialvalue) => a + initialvalue)
     console.log(totalCredit)
 
-    setCGPA(netGpa / totalCredit)
+    setCGPA(netGpa / totalCredit.toFixed(2))
 
     openModal()
     SetVisible(true)

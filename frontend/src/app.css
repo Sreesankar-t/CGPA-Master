@@ -47,6 +47,8 @@
 }
 .semesterWrapper {
   display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 .semesterWrapper .semester1 {
   animation: animateSemester1 2s;

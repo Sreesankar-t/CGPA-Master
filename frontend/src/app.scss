@@ -50,6 +50,8 @@
 
 .semesterWrapper {
   display: flex;
+  justify-content: center;
+  gap: 10px;
 
   .semester1 {
     animation: animateSemester1 2s;
