@@ -1,0 +1,178 @@
+@keyframes transilate {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes transformOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animateBtn {
+  from {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animateSemester1 {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animateSemester2 {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.semesterWrapper {
+  display: flex;
+}
+.semesterWrapper .semester1 {
+  animation: animateSemester1 2s;
+}
+.semesterWrapper .semester2 {
+  animation: animateSemester2 2s;
+}
+
+.h3wrapper {
+  width: 80%;
+  background-color: rgba(251, 182, 54, 0.971);
+  color: white;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px;
+  opacity: 0;
+  animation: transilate 2s 1s forwards;
+}
+
+.mainWrapper {
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 6px 6px 12px #c3c3c3, -6px -6px 12px #fdfdfd;
+}
+.wrapper label {
+  font-size: 20px;
+  font-weight: 500;
+}
+.wrapper input {
+  width: 20%;
+  height: 30px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border: 1px solid orange;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.wrapper button {
+  height: 40px;
+  width: 10%;
+  border: none;
+  background-color: transparent;
+  color: orange;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 12px #c3c3c3, -6px -6px 12px #fdfdfd;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.wrapper button:hover {
+  background-color: orange;
+  color: white;
+}
+.wrapper h3 {
+  color: orange;
+  animation: transformOpacity 2s;
+}
+
+.btnConatiner {
+  margin: auto;
+  width: 50%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btnConatiner button {
+  height: 40px;
+  width: 20%;
+  border: none;
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  animation: animateBtn 3s 1s forwards;
+  transition: all 0.5s ease-in-out;
+}
+.btnConatiner button:hover {
+  box-shadow: 6px 6px 12px #c3c3c3, -6px -6px 12px #fdfdfd;
+}
+
+@media screen and (max-width: 1024px) {
+  .h3wrapper {
+    line-height: 20px;
+  }
+  .semesterWrapper {
+    flex-direction: column;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .wrapper input {
+    width: 80%;
+    font-size: 12px;
+  }
+  .wrapper button {
+    width: 50%;
+  }
+  .btnConatiner button {
+    width: 100%;
+  }
+}/*# sourceMappingURL=app.css.map */
