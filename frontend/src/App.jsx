@@ -27,6 +27,7 @@ export default function App () {
   }
 
   const handleCallback = (data1, data2) => {
+  
     setData1(preve => [...preve, data1])
 
     setData2(preve => [...preve, data2])
@@ -37,8 +38,9 @@ export default function App () {
     console.log(netGpa)
     let totalCredit = data2.reduce((a, initialvalue) => a + initialvalue)
     console.log(totalCredit)
-
-    setCGPA(netGpa / totalCredit.toFixed(2))
+    let cgpa = (netGpa / totalCredit).toFixed(2); // Round to 2 decimal places
+    cgpa = parseFloat(cgpa);
+    setCGPA(cgpa)
 
     openModal()
     SetVisible(true)

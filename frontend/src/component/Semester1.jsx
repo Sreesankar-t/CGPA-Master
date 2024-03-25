@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSquareCheck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquareCheck } from '@fortawesome/free-solid-svg-icons'
 export default function Semester1 ({ handleCallback }) {
   const [data1, setData1] = useState({
     grade: null,
@@ -57,13 +57,15 @@ export default function Semester1 ({ handleCallback }) {
   }
 
   const handleFinish = () => {
+    if (total && ceditTotal.length == 0) {
+      alert('submit valid input')
+    }
     const data1 = total.reduce(
       (acumilator, correntValue) => acumilator + correntValue
     )
     const data2 = ceditTotal.reduce(
       (acumilator, correntValue) => acumilator + correntValue
     )
-
     handleCallback(data1, data2)
     setVisibel(true)
   }
@@ -92,12 +94,11 @@ export default function Semester1 ({ handleCallback }) {
             <button onClick={handleFinish}>finish</button>
           </>
         ) : (
-          <h3>semester 1 comppeted    <FontAwesomeIcon icon={faSquareCheck} />  </h3> 
-          
-          
+          <h3>
+            semester 1 comppeted <FontAwesomeIcon icon={faSquareCheck} />{' '}
+          </h3>
         )}
       </div>
-     
     </div>
   )
 }
